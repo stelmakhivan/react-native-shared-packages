@@ -138,12 +138,6 @@
     "output": "lib",
     "targets": [
       [
-        "commonjs",
-        {
-          "configFile": "./babel.config.js"
-        }
-      ],
-      [
         "module",
         {
           "configFile": "./babel.config.js"
