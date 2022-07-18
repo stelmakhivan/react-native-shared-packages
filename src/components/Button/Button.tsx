@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { TouchableOpacity, Text } from 'react-native';
+
 import styles from './button.styles';
+import { ButtonProps } from './button.types';
 
-const Button = () => {
-  const handlePress = () => {
-    // eslint-disable-next-line no-alert
-    alert('Button pressed');
-  };
-
+const Button: FC<ButtonProps> = ({
+  onPress,
+  buttonStyle,
+  label,
+  labelStyle,
+  ...buttonProps
+}) => {
   return (
-    <TouchableOpacity onPress={handlePress} style={styles.button}>
-      <Text style={styles.text}>Press</Text>
+    <TouchableOpacity
+      {...buttonProps}
+      onPress={onPress}
+      style={[styles.button, buttonStyle]}>
+      <Text style={[styles.text, labelStyle]}>{label}</Text>
     </TouchableOpacity>
   );
 };
