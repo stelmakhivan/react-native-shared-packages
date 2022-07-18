@@ -137,9 +137,9 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "commonjs",
-      "module",
-      "typescript"
+      ["commonjs", { "babelrc": true, "copyFlow": true }],
+      ["module", { "babelrc": true, "copyFlow": true }],
+      ["typescript", { "project": "tsconfig.build.json" }]
     ]
   }
 }
