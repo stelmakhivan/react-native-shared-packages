@@ -137,9 +137,24 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      ["commonjs", { "babelrc": true, "copyFlow": true }],
-      ["module", { "babelrc": true, "copyFlow": true }],
-      ["typescript", { "project": "tsconfig.build.json" }]
+      [
+        "commonjs",
+        {
+          "configFile": "./babel.config.js"
+        }
+      ],
+      [
+        "module",
+        {
+          "configFile": "./babel.config.js"
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
     ]
   }
 }
