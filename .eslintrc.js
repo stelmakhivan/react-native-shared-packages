@@ -69,12 +69,27 @@ module.exports = {
         ],
         pathGroups: [
           {
-            pattern: '{react,react-native}',
+            pattern: '{react}',
             group: 'external',
             position: 'before',
           },
+          {
+            pattern: '{react-native,react-native/**}',
+            group: 'parent',
+            position: 'before',
+          },
+          {
+            pattern: '{next,next/**}',
+            group: 'parent',
+            position: 'before',
+          },
         ],
-        pathGroupsExcludedImportTypes: ['react', 'react-native', 'builtin'],
+        pathGroupsExcludedImportTypes: [
+          'builtin',
+          'react',
+          'react-native',
+          'next',
+        ],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',

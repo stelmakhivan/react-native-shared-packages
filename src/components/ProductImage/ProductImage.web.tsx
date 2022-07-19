@@ -1,8 +1,10 @@
 import type { FC } from 'react';
 
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 
-const ProductImage: FC<ImageProps> = (props) => {
+import type { ProductImageProps } from './productImageProps';
+
+const ProductImage: FC<ProductImageProps> = (props) => {
   console.warn('Web ProductImage props: ', props);
   return <Image {...props} />;
 };
