@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { Image, ImageProps } from 'react-native';
 
 const ProductImage: FC<ImageProps> = (props) => {

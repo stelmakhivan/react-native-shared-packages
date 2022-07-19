@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 
 import styles from './button.styles';
-import { ButtonProps } from './button.types';
+import type { ButtonProps } from './button.types';
 
 const Button: FC<ButtonProps> = ({
   onPress,
